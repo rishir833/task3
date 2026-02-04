@@ -1,61 +1,44 @@
-# 🚀 Getting started with Strapi
+# TASK-3: Run Strapi on EC2 using Terraform
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Overview
+In this task, an EC2 instance was provisioned using Terraform and Strapi was installed and run on the EC2 instance. The Strapi admin panel was accessed via the public IP.
 
-### `develop`
+## Tech Stack
+- AWS EC2
+- Terraform
+- Ubuntu 24.04
+- Node.js 20
+- yarn
+- Strapi
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Steps Performed
 
-```
-npm run develop
-# or
+### 1. EC2 Provisioning using Terraform
+- Installed Terraform
+- Created EC2 instance
+- Allowed ports 22 and 1337 in Security Group
+
+### 2. Connect to EC2
+<!-- ```bash -->
+ssh -i <key.pem> ubuntu@<EC2-PUBLIC-IP>
+
+
+# 3. Install Node.js & npm
+
+sudo apt update
+sudo apt install nodejs npm -y
+
+# 4. Install Strapi
+
+yarn create strapi
+change the host name in .env file
+# 5. Run Strapi
+
 yarn develop
-```
+# 6. Access Admin Panel
 
-### `start`
+http://<EC2-PUBLIC-IP>:1337/admin
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### Result :- 
 
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Strapi was successfully running on the EC2 instance and the admin panel was accessible via browser.
