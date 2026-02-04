@@ -25,13 +25,13 @@ ssh -i <key.pem> ubuntu@<EC2-PUBLIC-IP>
 
 # 3. Install Node.js & npm
 
-sudo apt update
-sudo apt install nodejs npm -y
+- sudo apt update
+- sudo apt install nodejs npm -y
 
 # 4. Install Strapi
 
-yarn create strapi
-change the host name in .env file
+- yarn create strapi
+- change the host name in .env file
 # 5. Run Strapi
 
 yarn develop
@@ -41,4 +41,4 @@ http://<EC2-PUBLIC-IP>:1337/admin
 
 ### Result :- 
 
-Strapi was successfully running on the EC2 instance and the admin panel was accessible via browser.
+Strapi was successfully running on the EC2 instance and the admin panel was accessible via browser.<img width="1776" height="1004" alt="Image" src="https://github.com/user-attachments/assets/505e75c9-1cb7-4664-99e5-40f9e9a9e5f0" />
