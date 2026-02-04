@@ -42,3 +42,5 @@ http://<EC2-PUBLIC-IP>:1337/admin
 ### Result :- 
 
 Strapi was successfully running on the EC2 instance and the admin panel was accessible via browser.<img width="1776" height="1004" alt="Image" src="https://github.com/user-attachments/assets/505e75c9-1cb7-4664-99e5-40f9e9a9e5f0" />
+# Loom Video
+https://www.loom.com/share/94e03005ac204f4b8fef22ac64feaeb8
